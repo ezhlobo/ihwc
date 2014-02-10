@@ -1,5 +1,10 @@
 require 'sinatra'
 
+configure do
+  set :public_folder, Proc.new { File.join(root, "static") }
+  enable :sessions
+end
+
 get '/hi' do
   "Hello World!"
 end
