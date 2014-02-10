@@ -1,0 +1,10 @@
+<h1> Teams List </h1>
+<% unless @teams.empty? %>
+   <ol>
+   <% @teams.each do |team| %>
+      <li><p class="lead"> <%= team.name %> </p></li>
+   <% end %>
+   </ol> 
+<% else %>
+   <p>There are no teams</p>
+<% end %> 
