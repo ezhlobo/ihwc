@@ -1,0 +1,21 @@
+<h1> Add team </h1>
+<% unless @teams.empty? %>
+   <ol>
+   <% @teams.each do |team| %>
+      <li><%= team.name %></li>
+   <% end %>
+   </ol> 
+<% else %>
+   <p>There are no teams</p>
+<% end %> 
+
+<form action="/teams" method="post" class="form-inline well">
+   <p><input type="text" name='name' placeholder="Name" autofocus></p>
+   <button type="submit" class="btn btn-primary">Add team</button>
+</form>
+
+<form action="/carts" method="post" class="form-inline well">
+   <p><input type="text" name='name' placeholder="Name"></p>   
+   <input name="_method" value="delete" type="hidden"/>
+   <button type="submit" class="btn btn-primary">Delete team</button>
+</form>
