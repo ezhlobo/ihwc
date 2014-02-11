@@ -4,13 +4,13 @@ body {
 }
 
 .box {
-	width: 920px;
+	width: 924px;
 	height: 252px;
 }
 
 .group {
 	color: #35343a;
-	width: 449px;
+	width: 451px;
 	height: 252px;
 	border-left: 1px solid #bababa;
 	border-top: 1px solid #bababa;
@@ -23,7 +23,7 @@ body {
 }
 
 .country {
-	width: 79px;
+	width: 81px;
 	height: 24px;
 }
 
@@ -46,11 +46,11 @@ body {
 	float: left;
 }
 
-.one,.two,.three,.four {
+.t1,.t2,.t3,.t4 {
 	background-color: #c0fac4;
 }
 
-.eight {
+.t8 {
 	background-color: #fad3d3;
 }
 
