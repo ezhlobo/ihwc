@@ -5,12 +5,6 @@ class CreateGroups < ActiveRecord::Migration
       end
   end
 
-  def change
-      create_table :teams do |t|
-         t.belong_to :group
-      end
-  end
-
   def down
   end
 end
