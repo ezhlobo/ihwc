@@ -1,4 +1,6 @@
 class CreateResults < ActiveRecord::Migration
-  def change
-  end
+   def up
+      create_table :results do |t|
+      end
+   end
 end
