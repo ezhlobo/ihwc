@@ -1,6 +1,6 @@
-class CreateStatmatch < ActiveRecord::Migration
+class CreateStatmatches < ActiveRecord::Migration
    def up
-      create_table :statMatch do |t|
+      create_table :statmatches do |t|
          t.belongs_to :team
          t.belongs_to :game
          t.integer :gf

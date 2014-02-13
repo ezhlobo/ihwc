@@ -11,7 +11,7 @@ ActiveRecord::Base.establish_connection(
 class Team < ActiveRecord::Base
    belongs_to :group
    has_one :stat
-   has_many :games
+   has_and_belongs_to_many :games
 end
 
 class Group < ActiveRecord::Base
@@ -23,7 +23,7 @@ class Stat < ActiveRecord::Base
 end
 
 class Game < ActiveRecord::Base
-   belongs_to :team
+   has_and_belongs_to_many :teams
    has_one :result
    has_one :statmatch
 end
@@ -32,7 +32,7 @@ class Result < ActiveRecord::Base
    belongs_to :game
 end
 
-class Statmatch < ActiveRecord::Base
+class Statmatches < ActiveRecord::Base
    belongs_to :game
 end
 
