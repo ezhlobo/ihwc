@@ -10,14 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210182224) do
+ActiveRecord::Schema.define(version: 20140212213010) do
+
+  create_table "games", force: true do |t|
+    t.string  "date"
+    t.integer "place"
+    t.boolean "finished"
+    t.integer "team_id_one"
+    t.integer "team_id_two"
+  end
 
   create_table "groups", force: true do |t|
     t.string "name"
   end
 
+  create_table "results", force: true do |t|
+    t.integer "game_id"
+    t.integer "team_one"
+    t.integer "team_two"
+    t.integer "team_one_score"
+    t.integer "team_two_score"
+    t.integer "winner_id"
+  end
+
+  create_table "statMatch", force: true do |t|
+    t.integer "team_id"
+    t.integer "game_id"
+    t.integer "gf"
+    t.integer "ga"
+    t.integer "dif"
+    t.boolean "outtime"
+  end
+
+  create_table "stats", force: true do |t|
+    t.integer "team_id"
+    t.integer "gp"
+    t.integer "w"
+    t.integer "otw"
+    t.integer "otl"
+    t.integer "l"
+    t.integer "gf"
+    t.integer "ga"
+    t.integer "dif"
+    t.integer "pts"
+    t.integer "rank"
+  end
+
   create_table "teams", force: true do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "group_id"
   end
 
 end

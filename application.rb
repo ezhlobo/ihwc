@@ -10,9 +10,30 @@ ActiveRecord::Base.establish_connection(
 
 class Team < ActiveRecord::Base
    belongs_to :group
+   has_one :stat
+   has_many :games
 end
 
 class Group < ActiveRecord::Base
+   has_many :teams
+end
+
+class Stat < ActiveRecord::Base
+   belongs_to :team
+end
+
+class Game < ActiveRecord::Base
+   belongs_to :team
+   has_one :result
+   has_one :statmatch
+end
+
+class Result < ActiveRecord::Base
+   belongs_to :game
+end
+
+class Statmatch < ActiveRecord::Base
+   belongs_to :game
 end
 
 configure do
