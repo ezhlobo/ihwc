@@ -1,7 +1,7 @@
 class ChangeTeams < ActiveRecord::Migration
   def change
       change_table :teams do |t|
-         t.belongs_to :group
+         t.has_and_belongs_to_many :games
       end
    end
 end
