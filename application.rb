@@ -25,14 +25,9 @@ end
 class Game < ActiveRecord::Base
    has_and_belongs_to_many :teams
    has_one :result
-   has_one :statmatch
 end
 
 class Result < ActiveRecord::Base
-   belongs_to :game
-end
-
-class Statmatch < ActiveRecord::Base
    belongs_to :game
 end
 
@@ -44,11 +39,18 @@ end
 get '/' do
    @teams = Team.all
    @groups = Group.all
+   @stats = Stat.all
+   @games = Game.all
+   @results = Result.all
    erb :index
 end
 
 get '/teams' do
    @teams = Team.all
+   @groups = Group.all
+   @stats = Stat.all
+   @games = Game.all
+   @results = Result.all
    erb :teams
 end
 

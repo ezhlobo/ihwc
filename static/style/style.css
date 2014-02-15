@@ -93,3 +93,9 @@ body {
 .box > div,.box2 > div{
 	float: left;
 }
+
+.stak {
+	width: 180px;
+	height: 400px;
+	float: left;
+}
