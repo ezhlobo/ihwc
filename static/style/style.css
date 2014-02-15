@@ -4,17 +4,53 @@ body {
 }
 
 .box {
-	width: 920px;
+	width: 924px;
 	height: 252px;
+}
+
+.box2 {
+	width: 924px;
+	height: 784px;
 }
 
 .group {
 	color: #35343a;
-	width: 449px;
+	width: 451px;
 	height: 252px;
 	border-left: 1px solid #bababa;
 	border-top: 1px solid #bababa;
 	margin-left: 10px;
+}
+
+.matches {
+	color: #35343a;
+	width: 451px;
+	height: 784px;
+}
+
+.match {
+	width: 451px;
+	height: 28px;
+	float: left;
+}
+
+.match > div {
+	float: left;
+}
+
+.flag1,.flag2 {
+	width: 30px;
+	height: 28px;
+}
+
+.team1,.team2 {
+	width: 100px;
+	height: 28px;
+}
+
+.inf {
+	width: 151px;
+	height: 28px;
 }
 
 .i,.v,.vo,.po,.p,.gz,.gp,.rg,.o {
@@ -23,7 +59,7 @@ body {
 }
 
 .country {
-	width: 79px;
+	width: 81px;
 	height: 24px;
 }
 
@@ -46,14 +82,20 @@ body {
 	float: left;
 }
 
-.one,.two,.three,.four {
+.t1,.t2,.t3,.t4 {
 	background-color: #c0fac4;
 }
 
-.eight {
+.t8 {
 	background-color: #fad3d3;
 }
 
-.box > div {
+.box > div,.box2 > div{
+	float: left;
+}
+
+.stak {
+	width: 180px;
+	height: 400px;
 	float: left;
 }
