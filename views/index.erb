@@ -1,61 +1,73 @@
+<% @statOfA = Stat.where("team_id <= 8").order("pts DESC") %>
+<% @statOfB = Stat.where("team_id > 8").order("pts DESC") %>
 <h1> Teams List </h1>
-<% unless @teams.empty? %>
-	<div class="box">
-		<% for i in 0..1 %>
-			<div class="group">
-				<% for j in 0..8 %>
-					<% if j == 0 %>
-						<div class="legend">
-							<div class="country">Команда</div>
-							<div class="i">И</div>
-							<div class="v">В</div>
-							<div class="vo">ВО</div>
-							<div class="po">ПО</div>
-							<div class="p">П</div>
-							<div class="gz">ГЗ</div>
-							<div class="gp">ГП</div>
-							<div class="rg">РГ</div>
-							<div class="o">О</div>
-						</div> 
-					<% else %>
-						<div class="team <%="t#{j}"%>">
-							<div class="name country"><%= @teams.find(j+8*i).name %></div>
-							<div class="i"></div>
-							<div class="v"></div>
-							<div class="vo"></div>
-							<div class="po"></div>
-							<div class="p"></div>
-							<div class="gz"></div>
-							<div class="gp"></div>
-							<div class="rg"></div>
-							<div class="o"></div>
-						</div>
-					<%end%>
-				<% end %>
-			</div>
-		<% end %>
-	</div>
-<% else %>
-   <p>There are no teams</p>
-<% end %> 
-	<div class="box2">
-		<% for i in 0..1 %>
-			<div class="matches">
-				<% for j in 1..28 %>
-					<div class="match m<%="#{j}"%>">
-						<div class="flag1"></div>
-						<div class="team1"></div>
-						<div class="inf">
-							<div class="date"></div>
-							<div class="time"></div>
-							<div class="arena"></div>
-						</div>
-						<div class="team2"></div>
-						<div class="flag2"></div>
-					</div>
-				<% end %>
-			</div>
-		<% end %>
-	</div>
+<div class="box">
+   <% for i in 0..1 %>
+      <div class="group">
+         <div class="legend">
+            <div class="country">Команда</div>
+            <div class="i">И</div>
+            <div class="v">В</div>
+            <div class="vo">ВО</div>
+            <div class="po">ПО</div>
+            <div class="p">П</div>
+            <div class="gz">ГЗ</div>
+            <div class="gp">ГП</div>
+            <div class="rg">РГ</div>
+            <div class="o">О</div>
+         </div>
+         
+         <% if i == 0 %>
+            <% for j in 0..7 %> 
+               <div class="team <%="t#{j+1}"%>">
+                  <div class="name country"><%= @teams.find(@statOfA[j].team_id).name %></div>
+                  <div class="i"><%= @statOfA[j].gp %></div>
+                  <div class="v"><%= @statOfA[j].w %></div>
+                  <div class="vo"><%= @statOfA[j].otw %></div>
+                  <div class="po"><%= @statOfA[j].otl %></div>
+                  <div class="p"><%= @statOfA[j].l %></div>
+                  <div class="gz"><%= @statOfA[j].gf %></div>
+                  <div class="gp"><%= @statOfA[j].ga %></div>
+                  <div class="rg"><%= @statOfA[j].dif %></div>
+                  <div class="o"><%= @statOfA[j].pts %></div>
+               </div>
+            <% end %>
+         <% else %>
+            <% for j in 0..7 %> 
+               <div class="team <%="t#{j+1}"%>">
+                  <div class="name country"><%= @teams.find(@statOfB[j].team_id).name %></div>
+                  <div class="i"><%= @statOfB[j].gp %></div>
+                  <div class="v"><%= @statOfB[j].w %></div>
+                  <div class="vo"><%= @statOfB[j].otw %></div>
+                  <div class="po"><%= @statOfB[j].otl %></div>
+                  <div class="p"><%= @statOfB[j].l %></div>
+                  <div class="gz"><%= @statOfB[j].gf %></div>
+                  <div class="gp"><%= @statOfB[j].ga %></div>
+                  <div class="rg"><%= @statOfB[j].dif %></div>
+                  <div class="o"><%= @statOfB[j].pts %></div>
+               </div>
+            <% end %>
+         <% end %>
 
-
+      </div>
+   <% end %>
+</div>
+   <div class="box2">
+      <% for i in 0..1 %>
+         <div class="matches">
+            <% for j in 1..28 %>
+               <div class="match m<%="#{j}"%>">
+                  <div class="flag1"></div>
+                  <div class="team1"></div>
+                  <div class="inf">
+                     <div class="date"></div>
+                     <div class="time"></div>
+                     <div class="arena"></div>
+                  </div>
+                  <div class="team2"></div>
+                  <div class="flag2"></div>
+               </div>
+            <% end %>
+         </div>
+      <% end %>
+   </div>
