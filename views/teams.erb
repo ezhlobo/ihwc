@@ -1,21 +1,78 @@
-<h1> Add team </h1>
-<% unless @teams.empty? %>
-   <ol>
-   <% @teams.each do |team| %>
-      <li><%= team.name %></li>
-   <% end %>
-   </ol> 
-<% else %>
-   <p>There are no teams</p>
-<% end %> 
+<h1> Base </h1>
 
-<form action="/teams" method="post" class="form-inline well">
+<div class="stak">
+   <p>TEAMS</p>
+   <% unless @teams.empty? %>
+      <ol>
+      <% @teams.each do |team| %>
+         <li><%= team.name %></li>
+      <% end %>
+      </ol> 
+   <% else %>
+      <p>There are no teams</p>
+   <% end %> 
+</div>
+
+<div class="stak">
+   <p>GROUPS</p>
+   <% unless @groups.empty? %>
+      <ol>
+      <% @groups.each do |group| %>
+         <li><%= group.name %></li>
+      <% end %>
+      </ol> 
+   <% else %>
+      <p>There are no groups</p>
+   <% end %> 
+</div>
+
+<div class="stak">
+   <p>STATS</p>
+   <% unless @stats.empty? %>
+      <ol>
+      <% @stats.each do |stat| %>
+         <li><%= stat.team_id %></li>
+      <% end %>
+      </ol> 
+   <% else %>
+      <p>There are no stats</p>
+   <% end %> 
+</div>
+
+<div class="stak">
+   <p>GAMES</p>
+   <% unless @games.empty? %>
+      <ol>
+      <% @games.each do |game| %>
+         <li><%= game.date %></li>
+      <% end %>
+      </ol> 
+   <% else %>
+      <p>There are no games</p>
+   <% end %> 
+</div>
+
+
+<div class="stak">
+   <p>RESULTS</p>
+   <% unless @results.empty? %>
+      <ol>
+      <% @results.each do |result| %>
+         <li><%= result.game_id %></li>
+      <% end %>
+      </ol> 
+   <% else %>
+      <p>There are no results</p>
+   <% end %> 
+</div>
+
+<!-- <form action="/teams" method="post" class="form-inline well">
    <p><input type="text" name='name' placeholder="Name" autofocus></p>
    <button type="submit" class="btn btn-primary">Add team</button>
 </form>
 
-<form action="/carts" method="post" class="form-inline well">
+<form action="/teams" method="post" class="form-inline well">
    <p><input type="text" name='name' placeholder="Name"></p>   
    <input name="_method" value="delete" type="hidden"/>
    <button type="submit" class="btn btn-primary">Delete team</button>
-</form>
+</form> -->
