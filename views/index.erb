@@ -1,6 +1,12 @@
 <% @statOfA = Stat.where("team_id <= 8").order("pts DESC") %>
 <% @statOfB = Stat.where("team_id > 8").order("pts DESC") %>
-<h1> Teams List </h1>
+
+<% if Date.new(2014,5,9) < Date.today
+      dateToday = Date.today.day 
+   else dateToday = 9 end %>
+
+<% @gameTodayIDs = Game.where("date = 9").select("id") %>
+
 <div class="box">
    <% for i in 0..1 %>
       <div class="group">
@@ -52,22 +58,49 @@
       </div>
    <% end %>
 </div>
+
+<% unless @gameTodayIDs.empty? %>
+   <div class="box2">
+      <div class="matches">
+         <% for j in 0..@gameTodayIDs.length-1 %>
+            <div class="match m<%="#{j}"%>">
+               <div class="flag1"></div>
+               <div class="team1"><%= @games.find(@gameTodayIDs[j]).teams[0].name %></div>
+               <div class="inf">
+                  <div class="date"><%= dateToday %></div>
+                  <div class="time"></div>
+                  <div class="arena"><%= @games.find(@gameTodayIDs[j]).place %></div>
+               </div>
+               <div class="team2"><%= @games.find(@gameTodayIDs[j]).teams[1].name %></div>
+               <div class="flag2"></div>
+            </div>
+         <% end %>
+      </div>
+   </div>
+<% else %>
+   <p>There are no games</p>
+<% end %>
+
+<% unless @games.empty? %>
    <div class="box2">
       <% for i in 0..1 %>
          <div class="matches">
             <% for j in 1..28 %>
                <div class="match m<%="#{j}"%>">
                   <div class="flag1"></div>
-                  <div class="team1"></div>
+                  <div class="team1"><%= @games.find(j+28*i).teams[0].name %></div>
                   <div class="inf">
-                     <div class="date"></div>
+                     <div class="date"><%= @games.find(j+28*i).date %></div>
                      <div class="time"></div>
-                     <div class="arena"></div>
+                     <div class="arena"><%= @games.find(j+28*i).place %></div>
                   </div>
-                  <div class="team2"></div>
+                  <div class="team2"><%= @games.find(j+28*i).teams[1].name %></div>
                   <div class="flag2"></div>
                </div>
             <% end %>
          </div>
       <% end %>
-   </div>
+    </div>
+<% else %>
+   <p>There are no games</p>
+<% end %>

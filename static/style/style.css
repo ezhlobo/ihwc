@@ -1,101 +1,127 @@
 body {
-	/*background-color: #ebebeb;*/
+   /*background-color: #ebebeb;*/
 
 }
 
 .box {
-	width: 924px;
-	height: 252px;
-}
-
-.box2 {
-	width: 924px;
-	height: 784px;
+   width: 924px;
+   height: 252px;
 }
 
 .group {
-	color: #35343a;
-	width: 451px;
-	height: 252px;
-	border-left: 1px solid #bababa;
-	border-top: 1px solid #bababa;
-	margin-left: 10px;
-}
-
-.matches {
-	color: #35343a;
-	width: 451px;
-	height: 784px;
-}
-
-.match {
-	width: 451px;
-	height: 28px;
-	float: left;
-}
-
-.match > div {
-	float: left;
-}
-
-.flag1,.flag2 {
-	width: 30px;
-	height: 28px;
-}
-
-.team1,.team2 {
-	width: 100px;
-	height: 28px;
-}
-
-.inf {
-	width: 151px;
-	height: 28px;
+   color: #35343a;
+   width: 451px;
+   height: 252px;
+   border-left: 1px solid #bababa;
+   border-top: 1px solid #bababa;
+   margin-left: 10px;
 }
 
 .i,.v,.vo,.po,.p,.gz,.gp,.rg,.o {
-	width: 40px;
-	height: 24px;
+   width: 40px;
+   height: 24px;
 }
 
 .country {
-	width: 81px;
-	height: 24px;
+   width: 81px;
+   height: 24px;
 }
 
 .team > div, .legend > div {
-	border-right: 1px solid #bababa;
-	border-bottom: 1px solid #bababa;
-	padding-top: 3px;
-	text-align: center;
-	float: left;
-	/*padding-left: 5px;*/
+   border-right: 1px solid #bababa;
+   border-bottom: 1px solid #bababa;
+   padding-top: 3px;
+   text-align: center;
+   float: left;
+   /*padding-left: 5px;*/
 }
 
 .legend {
-	background-color: #d7d7d7;
-	font-weight: 700;
-	float: left;
+   background-color: #d7d7d7;
+   font-weight: 700;
+   float: left;
 }
 
 .team {
-	float: left;
+   float: left;
 }
 
 .t1,.t2,.t3,.t4 {
-	background-color: #c0fac4;
+   background-color: #c0fac4;
 }
 
 .t8 {
-	background-color: #fad3d3;
+   background-color: #fad3d3;
 }
 
 .box > div,.box2 > div{
-	float: left;
+   float: left;
+}
+
+.box2 {
+   margin-top: 10px;
+   width: 924px;
+   height: 1064px;
+}
+
+.matches {
+   color: #35343a;
+   font-size: 8pt;
+   text-align: center;
+   width: 451px;
+   height: 1064px;
+   margin-left: 10px;
+}
+
+.match {
+   border: 1px solid #bababa;
+   width: 451px;
+   height: 38px;
+   margin-top: 10px;
+   float: left;
+}
+
+.match > div {
+   float: left;
+}
+
+.flag1,.flag2 {
+   width: 50px;
+   height: 38px;
+}
+
+.team1,.team2 {
+   width: 100px;
+   height: 38px;
+   position: relative;
+   top: 4px;
+}
+
+.inf {
+   width: 151px;
+   height: 38px;
+}
+
+.date {
+   position: relative;
+   top: -4px;
+   height: 9px;
+}
+
+.time {
+   position: relative;
+   top: -4px;
+   height: 10px;
+}
+
+.arena {
+   position: relative;
+   top: -4px;
+   height: 9px;
 }
 
 .stak {
-	width: 180px;
-	height: 400px;
-	float: left;
+   width: 180px;
+   height: 400px;
+   float: left;
 }
