@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140215111517) do
   create_table "games_teams", force: true do |t|
     t.integer "game_id"
     t.integer "team_id"
+>>>>>>> valeryLitvin-master
   end
 
   create_table "groups", force: true do |t|
