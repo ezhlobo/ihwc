@@ -7,6 +7,7 @@ else dateToday = 9 end %>
 
 <% @gameTodayIDs = Game.where("date = 9").select("id") %>
 
+
 <div>
 	<div class="box">
 		<% for i in 0..1 %>
@@ -198,5 +199,9 @@ else dateToday = 9 end %>
 </div>
 
 <div>
-	Куча всякой инфы!!
+   <div class="tweet-timeline">
+      <a class="twitter-timeline" href="https://twitter.com/search?q=%23ukraine" data-widget-id="438830263506702336">Твиты о "#ukraine"</a>
+   </div>
+   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+   </script>
 </div>
