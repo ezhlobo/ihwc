@@ -20,6 +20,8 @@ GEM
     arel (4.0.2)
     atomic (1.1.14)
     builder (3.1.4)
+    daemons (1.1.9)
+    eventmachine (1.0.3)
     excon (0.31.0)
     heroku (3.3.0)
       heroku-api (~> 0.3.17)
@@ -54,6 +56,10 @@ GEM
     sinatra-basic-auth (0.1.0)
       sinatra
     sqlite3 (1.3.8)
+    thin (1.6.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.0.0)
     thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
@@ -69,3 +75,4 @@ DEPENDENCIES
   sinatra-activerecord
   sinatra-basic-auth
   sqlite3
+  thin
