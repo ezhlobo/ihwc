@@ -40,6 +40,10 @@
 		}
 	};
 
+	var cssclass_has = function(el, classname) {
+		return browser.classList ? el.classList.contains(classname) : el.className.indexOf(classname) > -1;
+	};
+
 	// Tabs
 	(function() {
 		var tabs = $(".tab");
@@ -71,6 +75,10 @@
 
 		each(menulinks, function(link) {
 			addEvent(link, "click", menuClicked);
+
+			if (cssclass_has(link.parentNode, "-active")) {
+				showTab(link.hash);
+			}
 		});
 	})();
 
