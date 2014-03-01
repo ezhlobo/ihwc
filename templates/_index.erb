@@ -2,7 +2,7 @@
 <% @statOfB = Stat.where("team_id > 8").order("pts DESC") %>
 
 <% if Date.new(2014,5,9) < Date.today
-	dateToday = Date.today.day 
+	dateToday = Date.today.day
 else dateToday = 9 end %>
 
 <% @gameTodayIDs = Game.where("date = 9").select("id") %>
@@ -24,9 +24,9 @@ else dateToday = 9 end %>
 					<div class="rg">РГ</div>
 					<div class="o">О</div>
 				</div>
-			
+
 				<% if i == 0 %>
-					<% for j in 0..7 %> 
+					<% for j in 0..7 %>
 						<div class="team <%="t#{j+1}"%>">
 							<div class="name country"><%= @teams.find(@statOfA[j].team_id).name %></div>
 							<div class="i"><%= @statOfA[j].gp %></div>
@@ -41,7 +41,7 @@ else dateToday = 9 end %>
 						</div>
 					<% end %>
 				<% else %>
-					<% for j in 0..7 %> 
+					<% for j in 0..7 %>
 						<div class="team <%="t#{j+1}"%>">
 							<div class="name country"><%= @teams.find(@statOfB[j].team_id).name %></div>
 							<div class="i"><%= @statOfB[j].gp %></div>
@@ -195,7 +195,7 @@ else dateToday = 9 end %>
 			</div>
 		</div>
 	</div>
-	
+
 </div>
 
 <div>
