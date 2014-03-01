@@ -56,6 +56,8 @@ GEM
     sinatra-basic-auth (0.1.0)
       sinatra
     sqlite3 (1.3.9)
+    sinatra-partial (0.4.0)
+      sinatra
     thin (1.6.1)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -74,5 +76,6 @@ DEPENDENCIES
   sinatra
   sinatra-activerecord
   sinatra-basic-auth
+  sinatra-partial
   sqlite3
   thin

@@ -1,0 +1,146 @@
+/* RESET */
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+		}
+	html, body {
+		width: 100%;
+		height: 100%;
+		}
+	body {
+		line-height: 1;
+		position: relative;
+		}
+	ol, ul {
+		list-style: none;
+		}
+	blockquote, q {
+		quotes: none;
+		}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+		}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		}
+
+	#wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+		position: relative;
+		background: url(/images/footer-bg.png) no-repeat 50% 100%;
+		}
+
+/* MAIN */
+	#main {
+		width: 1042px;
+		/*height: 1500px;*/
+		margin: 0 auto 72px;
+		padding-top: 32px;
+		position: relative;
+		z-index: 100;
+		}
+
+		#header {
+			width: 670px;
+			height: 147px;
+			padding-top: 25px;
+			margin-left: -335px;
+			top: 32px;
+			left: 50%;
+			position: absolute;
+			background: url(/images/content-toptext.png) no-repeat 0 0;
+
+			font-size: 45px;
+			font-weight: bold;
+			font-family: Calibri;
+			color: #3c3c3c;
+			text-align: center;
+			}
+
+		#menu {
+			width: 1005px;
+			height: 96px;
+			margin-left: -502.5px;
+			top: 127px;
+			left: 50%;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 27.5px;
+			font-family: Calibri;
+			}
+
+			#menu li {
+				width: 303px;
+				height: 88px;
+				margin: 0 16px;
+				float: left;
+				overflow: hidden;
+				}
+			#menu a {
+				height: 96px;
+				display: block;
+				color: #fff;
+				text-decoration: none;
+				line-height: 128px;
+				background: url(/images/content-menu-bg.png) no-repeat 0 0;
+				}
+			#menu li.-active a {
+				background-position: 0 -96px;
+				}
+
+		#content {
+			width: 1000px;
+			height: 600px;
+			margin: 170px auto 0;
+			border: 13px solid #54b7e7;
+			/*border-bottom-width: 27px;*/
+			border-radius: 12px;
+			background-color: #3c3c3c;
+			background-color: rgba(60,60,60,.9);
+			}
+
+			/*.tabs {}*/
+				.tab {
+					display: none;
+					}
+				.tab.-showed {
+					display: block;
+					}
+
+/* HEADER UNDERGROUND */
+	.header-bg {
+		width: 2354px;
+		height: 575px;
+		margin-left: -1177px;
+		left: 50%;
+		top: 0;
+		position: absolute;
+		background: url(/images/header-bg.png) no-repeat 50% 0;
+		}
