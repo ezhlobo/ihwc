@@ -126,6 +126,14 @@
 			background-color: rgba(60,60,60,.9);
 			}
 
+			/*.tabs {}*/
+				.tab {
+					display: none;
+					}
+				.tab.-showed {
+					display: block;
+					}
+
 /* HEADER UNDERGROUND */
 	.header-bg {
 		width: 2354px;

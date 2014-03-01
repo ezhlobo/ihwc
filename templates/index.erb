@@ -5,8 +5,16 @@
 		<li><a href="#b-playoff">Play-Off</a></li>
 		<li><a href="#b-info">Info</a></li>
 	</ul>
-	<div id="content">
-		text
+	<div id="content" class="tabs">
+		<div id="b-group" class="tab -showed">
+			<%= partial "tabs/group" %>
+		</div>
+		<div id="b-playoff" class="tab">
+			<%= partial "tabs/playoff" %>
+		</div>
+		<div id="b-info" class="tab">
+			<%= partial "tabs/info" %>
+		</div>
 	</div>
 </div>
 <div class="header-bg"></div>

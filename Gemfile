@@ -7,6 +7,7 @@ gem 'thin'
 gem "sinatra"
 gem "sinatra-activerecord"
 gem "sinatra-basic-auth"
+gem "sinatra-partial"
 
 group :development, :test do
   gem 'sqlite3'
