@@ -1,6 +1,9 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require 'sinatra/partial'
 require 'sqlite3'
+
+register Sinatra::Partial
 
 ActiveRecord::Base.establish_connection(
   :adapter => 'sqlite3',
@@ -33,6 +36,7 @@ end
 configure do
   set :public_folder, Proc.new { File.join(root, "assets") }
   set :views, Proc.new { File.join(root, "templates") }
+  set :partial_template_engine, :erb
   enable :sessions
 end
 
