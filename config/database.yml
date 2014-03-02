@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ihwc_development
+  pool: 5
+  username: userdb
+  password: asddsa$asddsa
+  host: localhost
+  port: 5432
